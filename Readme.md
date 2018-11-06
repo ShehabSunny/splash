@@ -6,6 +6,26 @@ You need to have a developer account of unsplash.com in order to use this tool.
 2. Create a file at `$HOME/.gosplash/.env` and add the line `ACCESS_KEY=<access_key>` (replace with your access key) in the file.
 
 
+### Build and Install:
+Pull the source code with
+`go get github.com/ShehabSunny/gosplash`  
+
+Build with:
+```
+make build
+```
+or 
+```
+go build .
+``` 
+
+Install with:
+```
+go install
+```
+---
+  
+
 ### Usage: 
 This command will pull a random image from the API and set as desktop wallpaper.
 ```
