@@ -10,6 +10,8 @@ You need to have a developer account of unsplash.com in order to use this tool.
 Pull the source code with
 `go get github.com/ShehabSunny/gosplash`  
 
+get all dependencies by running `dep ensure`
+
 Build with:
 ```
 make build
