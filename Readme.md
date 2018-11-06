@@ -1,4 +1,4 @@
-## `gosplash` is a simple cli tool for changing the wallpaper dynamically and easily from hundrands of thousands of images of unsplash.com.
+## `gosplash` is a simple cli tool for changing the wallpaper dynamically and easily from hundreds of thousands of images of unsplash.com.
 
 ### Prerequisite:
 You need to have a developer account of unsplash.com in order to use this tool.  
