@@ -1,9 +1,9 @@
-package main
+package main 
 
 import (
 	"flag"
 	"fmt"
-	"gosplash/resplash"
+	"github.com/ShehabSunny/splash/resplash"
 	"log"
 	"os"
 	"os/user"
@@ -28,21 +28,21 @@ func main() {
 		return
 	}
 
-	gosplashHome := filepath.Join(usr.HomeDir, ".gosplash", ".env")
-	err = godotenv.Load(gosplashHome)
+	splashHome := filepath.Join(usr.HomeDir, ".splash", ".env")
+	err = godotenv.Load(splashHome)
 	if err != nil {
-		fmt.Println("error loading .env file in $HOME/.gosplash directory")
+		fmt.Println("error loading .env file in $HOME/.splash directory")
 		fmt.Printf("1. Signup for an unsplash developer account. \n")
-		fmt.Printf("2. Create an app, get credentials and put ACCESS_KEY=<acckess_key> in a .env file in $HOME/.gosplash directory. \n\n")
+		fmt.Printf("2. Create an app, get credentials and put ACCESS_KEY=<acckess_key> in a .env file in $HOME/.splash directory. \n\n")
 		return
 	}
 
 	api := "https://api.unsplash.com"
 	clientID := os.Getenv("ACCESS_KEY")
 	if clientID == "" {
-		fmt.Println("ACCESS_KEY not found in .env file in $HOME/.gosplash directory")
+		fmt.Println("ACCESS_KEY not found in .env file in $HOME/.splash directory")
 		fmt.Printf("1. Signup for an unsplash developer account. \n")
-		fmt.Printf("2. Create an app, get credentials and put ACCESS_KEY=<acckess_key> in a .env file in $HOME/.gosplash directory. \n\n")
+		fmt.Printf("2. Create an app, get credentials and put ACCESS_KEY=<acckess_key> in a .env file in $HOME/.splash directory. \n\n")
 
 		return
 	}
@@ -71,7 +71,7 @@ func main() {
 }
 
 func usage() {
-	fmt.Printf("gosplash: a cli tool to change wallpaper from unsplash api.\n\n")
+	fmt.Printf("splash: a cli tool to change wallpaper from unsplash api.\n\n")
 	fmt.Printf("Usage: no arguments will set a random wallpaper. \n[OPTIONS] argument:\n")
 	flag.PrintDefaults()
 }
